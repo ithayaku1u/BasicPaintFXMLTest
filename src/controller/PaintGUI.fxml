@@ -1,0 +1,51 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.layout.VBox?>
+<?import controller.ColorPickerController?>
+<?import controller.MenuController?>
+<?import javafx.scene.control.MenuBar?>
+
+<BorderPane fx:controller="controller.Controller"
+            xmlns:fx="http://javafx.com/fxml" prefHeight="800" prefWidth="800">
+
+    <left>
+        <MenuBar>
+            <menus>
+                <MenuController fx:id="menuController" />
+            </menus>
+        </MenuBar>
+        <VBox>
+
+            <children>
+                <Button text="Clear image'" layoutX="26.0" layoutY="82.0" onAction="#clearImage"/> <!--  onAction reference a method from the controller -->
+
+                <!-- a user defined widget/node constructed thanks to a default constructor and used by the current controller -->
+                <ColorPickerController fx:id="colorPickerController" />
+
+                <!-- include a subview with its own controller, can help keeping things organised -->
+                <!-- <fx:include fx:id="subview" source="subview.fxml" /> -->
+                <!-- content from subview.fxml included here -->
+
+            </children>
+        </VBox>
+    </left>
+
+    <center>
+        <Group fx:id="imgZone">
+            <ImageView fx:id="imageView" layoutX="4.0" layoutY="4.0" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" />
+            <Canvas fx:id="canvas" layoutX="4.0" layoutY="4.0" width="400" height="400" />
+        </Group>
+    </center>
+
+    <right>
+        <VBox fx:id="rightArea" />
+    </right>
+
+
+</BorderPane>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.Canvas?>
+
+<fx:root type="javafx.scene.control.MenuBar" xmlns:fx="http://javafx.com/fxml"
+>
+
+        <Menu text="File">
+            <MenuItem fx:id="loadImage" text="Ouvrir" />
+            <MenuItem fx:id="saveImage" text="Sauvegarder"/>
+            <MenuItem fx:id="aveAsImage" text="Sauvegarder Sous"/>
+        </Menu>
+
+
+
+
+</fx:root>
